@@ -5,9 +5,6 @@
 
 #from sys import argv
 import argparse
-#import sys
-#import os.path
-
 
 #import the module containing all the country data.
 #Country data not put together within this file for purposes of avoiding clutter
@@ -49,6 +46,26 @@ def get_list_of_countries():
 
 #first function to determine the phone code of the requested country
 def code(state):
+	"""
+	#Import code to get the telephone code by passing the country name
+	
+	>>> from pycountrycode import code
+	>>> code('Zimbabwe')
+	'+263'
+	>>> code('New Zealand')
+	'+64'
+	>>> code('Peru')
+	'+51'
+	>>> code('Madagascar')
+	'+261'
+	>>> code('Russia')
+	'+7'
+	>>> code('Australia')
+	'+61'
+	>>> code('Israel')
+	'+972 '
+	>>>
+	"""
 	phoneCarrier = get_list_of_countries()
 	usr_state = state
 	if TTY:
@@ -75,6 +92,24 @@ def code(state):
 
 #second function to determine the country of the unknown phone code.
 def phoneCode(callCode):
+	"""
+	#Import phoneCode to get country name using the telephone code
+	
+	>>> from pycountrycode import phoneCode
+	>>> phoneCode('+52')
+	'Mexico'
+	>>> phoneCode('+56')
+	'Easter Island'
+	>>> phoneCode('+1')
+	'United States of America'
+	>>> phoneCode('+7')
+	'Russia'
+	>>> phoneCode('+44')
+	'Britain'
+	>>> phoneCode('+86')
+	'China'
+	>>>
+	"""
 	phoneCarrier = country
 	phone = callCode
 	if TTY:
