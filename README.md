@@ -27,7 +27,7 @@ I wanted to write something that others could find useful.
 - '+51'
 - ***code('Madagascar')***
 - '+261'
-- ***code('Russia')
+- ***code('Russia')***
 - '+7'
 - ***code('Australia')***
 - '+61'
