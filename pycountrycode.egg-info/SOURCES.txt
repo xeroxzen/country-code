@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+pycountrycode/__init__.py
+pycountrycode/countryData.py
+pycountrycode/countryData.txt
+pycountrycode/countrycode.py
+pycountrycode.egg-info/PKG-INFO
+pycountrycode.egg-info/SOURCES.txt
+pycountrycode.egg-info/dependency_links.txt
+pycountrycode.egg-info/top_level.txt
