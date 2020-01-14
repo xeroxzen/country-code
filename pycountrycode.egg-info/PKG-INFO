@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: pycountrycode
-Version: 1.1.3
+Version: 1.1.4
 Summary: A neat country call code retriever
 Home-page: https://github.com/xeroxzen/country-code
 Author: Andile Jaden Mbele
@@ -35,7 +35,7 @@ Description: **Welcome to PyCountryCode's documentation!**
         - '+51'
         - ***code('Madagascar')***
         - '+261'
-        - ***code('Russia')
+        - ***code('Russia')***
         - '+7'
         - ***code('Australia')***
         - '+61'
