@@ -45,24 +45,24 @@ def get_list_of_countries():
 	return DATA
 
 #first function to determine the phone code of the requested country
-def code(state):
+def getCode(state):
 	"""
-	#Import code to get the telephone code by passing the country name
-	
+	#Import getCode to get the telephone code by passing the country name
+
 	>>> from pycountrycode import code
-	>>> code('Zimbabwe')
+	>>> getCode('Zimbabwe')
 	'+263'
-	>>> code('New Zealand')
+	>>> getCode('New Zealand')
 	'+64'
-	>>> code('Peru')
+	>>> getCode('Peru')
 	'+51'
-	>>> code('Madagascar')
+	>>> getCode('Madagascar')
 	'+261'
-	>>> code('Russia')
+	>>> getCode('Russia')
 	'+7'
-	>>> code('Australia')
+	>>> getCode('Australia')
 	'+61'
-	>>> code('Israel')
+	>>> getCode('Israel')
 	'+972 '
 	>>>
 	"""
@@ -87,26 +87,26 @@ def code(state):
 				usr_state = usr_state.title()
 				return phoneCarrier[usr_state]
 		except:
-			return 0
+			return 'Undefined country'
 	#print(CountryCallingCode.get(name))
 
-#second function to determine the country of the unknown phone code.
-def phoneCode(callCode):
+#second function to determine the uknown country of the passed in phone code.
+def getCountry(callCode):
 	"""
-	#Import phoneCode to get country name using the telephone code
-	
-	>>> from pycountrycode import phoneCode
-	>>> phoneCode('+52')
+	#Import getCountry to get country name using the telephone code
+
+	>>> from pycountrycode import getCountry
+	>>> getCountry('+52')
 	'Mexico'
-	>>> phoneCode('+56')
+	>>> getCountry('+56')
 	'Easter Island'
-	>>> phoneCode('+1')
+	>>> getCountry('+1')
 	'United States of America'
-	>>> phoneCode('+7')
+	>>> getCountry('+7')
 	'Russia'
-	>>> phoneCode('+44')
+	>>> getCountry('+44')
 	'Britain'
-	>>> phoneCode('+86')
+	>>> getCountry('+86')
 	'China'
 	>>>
 	"""
@@ -131,12 +131,12 @@ def phoneCode(callCode):
 				phone = phone.title()
 				return phoneCarrier[phone]
 		except:
-			return 0
+			return 'Undefined country code'
 
 #calling my first function.
-if __name__ == code:
-	code()
+if __name__ == getCode:
+	getCode()
 
 #calling my second function.
-if __name__ == phoneCode:
-	phoneCode()
+if __name__ == getCountry:
+	getCountry()
