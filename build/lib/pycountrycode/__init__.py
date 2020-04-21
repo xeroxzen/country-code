@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 
-Author = 'Andile Jaden Mbele'
-Email = 'andilembele020@gmail.com'
-Github='www.github.com/xeroxzen/pycountrycode'
-
-__author__ = Author
-__email__ = Email
-__github__ = Github
+__author__ = 'Andile Jaden Mbele'
+__email__ = 'andilembele020@gmail.com'
+__github__ = 'www.github.com/xeroxzen/pycountrycode'
+__package__ = 'pycountrycode'
