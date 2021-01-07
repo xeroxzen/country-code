@@ -49,7 +49,7 @@ def getCode(state):
 	"""
 	#Import getCode to get the telephone code by passing the country name
 
-	>>> from pycountrycode import code
+	>>> from pycountrycode.countrycode import getCode
 	>>> getCode('Zimbabwe')
 	'+263'
 	>>> getCode('New Zealand')
@@ -95,7 +95,7 @@ def getCountry(callCode):
 	"""
 	#Import getCountry to get country name using the telephone code
 
-	>>> from pycountrycode import getCountry
+	>>> from pycountrycode.countrycode import getCountry
 	>>> getCountry('+52')
 	'Mexico'
 	>>> getCountry('+56')
