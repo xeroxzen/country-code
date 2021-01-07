@@ -45,24 +45,24 @@ def get_list_of_countries():
 	return DATA
 
 #first function to determine the phone code of the requested country
-def getCode(state):
+def get_code(state):
 	"""
-	#Import getCode to get the telephone code by passing the country name
+	#Import get_code to get the telephone code by passing the country name
 
-	>>> from pycountrycode.countrycode import getCode
-	>>> getCode('Zimbabwe')
+	>>> from pycountrycode.countrycode import get_code
+	>>> get_code('Zimbabwe')
 	'+263'
-	>>> getCode('New Zealand')
+	>>> get_code('New Zealand')
 	'+64'
-	>>> getCode('Peru')
+	>>> get_code('Peru')
 	'+51'
-	>>> getCode('Madagascar')
+	>>> get_code('Madagascar')
 	'+261'
-	>>> getCode('Russia')
+	>>> get_code('Russia')
 	'+7'
-	>>> getCode('Australia')
+	>>> get_code('Australia')
 	'+61'
-	>>> getCode('Israel')
+	>>> get_code('Israel')
 	'+972 '
 	>>>
 	"""
@@ -134,8 +134,8 @@ def getCountry(callCode):
 			return 'Undefined country code'
 
 #calling my first function.
-if __name__ == getCode:
-	getCode()
+if __name__ == get_code:
+	get_code()
 
 #calling my second function.
 if __name__ == getCountry:
