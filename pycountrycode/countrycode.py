@@ -11,19 +11,19 @@ import argparse
 
 #sys.path.append(os.path.join(os.path.dirname(__file__), '.'))
 
-from . country_data import CountryCallingCode
+from . country_data import country_calling_code
 # from countryData import CountryCallingCode
 
 #Details about the author. It'll be a shame to write a module and ship it without
 #putting down digital signature.
 
 TTY = False
-DATA = CountryCallingCode
+DATA = country_calling_code
 
 #This for loop is for inverting my original country data
 #so it can be used for checking a phone code for an unknown state
 #country = {value:key for key, value in calling_code.items()} #another way
-country = dict((v,k) for k,v in CountryCallingCode.items())
+country = dict((v,k) for k,v in country_calling_code.items())
 
 def parse_arguments(arg):
 	#handles commandline input
@@ -34,7 +34,7 @@ def parse_arguments(arg):
 		prog=PROGRAM, description=DESCRIPTION,
 		usage='%(prog)s [country]'
 	)
-	parser.add_argument('country', help="Displays the contry code of a country.",
+	parser.add_argument('country', help="Displays the country code of a country.",
 						nargs='+')
 	args = parser.parser_args(arg)
 	country_data_list = ' '.join(args.country)
