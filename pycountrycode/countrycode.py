@@ -66,26 +66,26 @@ def get_code(state):
 	'+972 '
 	>>>
 	"""
-	phoneCarrier = get_list_of_countries()
+	phone_carrier = get_list_of_countries()
 	usr_state = state
 	if TTY:
 		try:
 			if usr_state.istitle():
 				print('The country code of %s is %s' .format
-					(usr_state, phoneCarrier[usr_state]))
+					(usr_state, phone_carrier[usr_state]))
 			else:
 				usr_state = usr_state.title()
 				print("The country calling code of %s is %s" .format
-					(usr_state, phoneCarrier[usr_state]))
+					(usr_state, phone_carrier[usr_state]))
 		except:
 			print("Please enter a valid country name.")
 	else:
 		try:
 			if usr_state.istitle():
-				return phoneCarrier[usr_state]
+				return phone_carrier[usr_state]
 			else:
 				usr_state = usr_state.title()
-				return phoneCarrier[usr_state]
+				return phone_carrier[usr_state]
 		except:
 			return 'Undefined country'
 	#print(CountryCallingCode.get(name))
@@ -110,26 +110,26 @@ def get_country(callCode):
 	'China'
 	>>>
 	"""
-	phoneCarrier = country
+	phone_carrier = country
 	phone = callCode
 	if TTY:
 		try:
 			if phone.istitle():
 				print('The country code of %s is %s' .format
-					(phone, phoneCarrier[phone]))
+					(phone, phone_carrier[phone]))
 			else:
 				phone = phone.title()
 				print("The country calling code of %s is %s" .format
-					(phone, phoneCarrier[phone]))
+					(phone, phone_carrier[phone]))
 		except:
 			print("Please enter a valid country name.")
 	else:
 		try:
 			if phone.istitle():
-				return phoneCarrier[phone]
+				return phone_carrier[phone]
 			else:
 				phone = phone.title()
-				return phoneCarrier[phone]
+				return phone_carrier[phone]
 		except:
 			return 'Undefined country code'
 
