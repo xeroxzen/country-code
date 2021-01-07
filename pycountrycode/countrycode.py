@@ -11,7 +11,7 @@ import argparse
 
 #sys.path.append(os.path.join(os.path.dirname(__file__), '.'))
 
-from . countryData import CountryCallingCode
+from . country_data import CountryCallingCode
 # from countryData import CountryCallingCode
 
 #Details about the author. It'll be a shame to write a module and ship it without
