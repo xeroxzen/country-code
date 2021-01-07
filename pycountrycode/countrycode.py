@@ -21,7 +21,7 @@ TTY = False
 DATA = country_calling_code
 
 #This for loop is for inverting my original country data
-#so it can be used for checking a phone code for an unknown state
+#so it can be used for checking a phone code for an unknown selected_country
 #country = {value:key for key, value in calling_code.items()} #another way
 country = dict((v,k) for k,v in country_calling_code.items())
 
@@ -45,7 +45,7 @@ def get_list_of_countries():
 	return DATA
 
 #first function to determine the phone code of the requested country
-def get_code(state):
+def get_code(selected_country):
 	"""
 	#Import get_code to get the telephone code by passing the country name
 
@@ -67,31 +67,31 @@ def get_code(state):
 	>>>
 	"""
 	phone_carrier = get_list_of_countries()
-	usr_state = state
+	country = selected_country
 	if TTY:
 		try:
-			if usr_state.istitle():
+			if country.istitle():
 				print('The country code of %s is %s' .format
-					(usr_state, phone_carrier[usr_state]))
+					(country, phone_carrier[country]))
 			else:
-				usr_state = usr_state.title()
+				country = country.title()
 				print("The country calling code of %s is %s" .format
-					(usr_state, phone_carrier[usr_state]))
+					(country, phone_carrier[country]))
 		except:
 			print("Please enter a valid country name.")
 	else:
 		try:
-			if usr_state.istitle():
-				return phone_carrier[usr_state]
+			if country.istitle():
+				return phone_carrier[country]
 			else:
-				usr_state = usr_state.title()
-				return phone_carrier[usr_state]
+				country = country.title()
+				return phone_carrier[country]
 		except:
 			return 'Undefined country'
 	#print(CountryCallingCode.get(name))
 
 #second function to determine the uknown country of the passed in phone code.
-def get_country(callCode):
+def get_country(call_code):
 	"""
 	#Import get_country to get country name using the telephone code
 
@@ -111,7 +111,7 @@ def get_country(callCode):
 	>>>
 	"""
 	phone_carrier = country
-	phone = callCode
+	phone = call_code
 	if TTY:
 		try:
 			if phone.istitle():
