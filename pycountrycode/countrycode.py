@@ -91,22 +91,22 @@ def get_code(state):
 	#print(CountryCallingCode.get(name))
 
 #second function to determine the uknown country of the passed in phone code.
-def getCountry(callCode):
+def get_country(callCode):
 	"""
-	#Import getCountry to get country name using the telephone code
+	#Import get_country to get country name using the telephone code
 
-	>>> from pycountrycode.countrycode import getCountry
-	>>> getCountry('+52')
+	>>> from pycountrycode.countrycode import get_country
+	>>> get_country('+52')
 	'Mexico'
-	>>> getCountry('+56')
+	>>> get_country('+56')
 	'Easter Island'
-	>>> getCountry('+1')
+	>>> get_country('+1')
 	'United States of America'
-	>>> getCountry('+7')
+	>>> get_country('+7')
 	'Russia'
-	>>> getCountry('+44')
+	>>> get_country('+44')
 	'Britain'
-	>>> getCountry('+86')
+	>>> get_country('+86')
 	'China'
 	>>>
 	"""
@@ -138,5 +138,5 @@ if __name__ == get_code:
 	get_code()
 
 #calling my second function.
-if __name__ == getCountry:
-	getCountry()
+if __name__ == get_country:
+	get_country()
