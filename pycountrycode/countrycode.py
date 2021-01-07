@@ -1,41 +1,43 @@
 #!/usr/bin/env python3
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 """Top-level package for Country Call Code Finder."""
 
-#from sys import argv
+# from sys import argv
 import argparse
 
-#import the module containing all the country data.
-#Country data not put together within this file for purposes of avoiding clutter
+# import the module containing all the country data.
+# Country data not put together within this file for purposes of avoiding clutter
 
-#sys.path.append(os.path.join(os.path.dirname(__file__), '.'))
+# sys.path.append(os.path.join(os.path.dirname(__file__), '.'))
+from typing import Dict, Any, Union
 
-from . country_data import country_calling_code
+from .country_data import country_calling_code
+
 # from countryData import CountryCallingCode
 
-#Details about the author. It'll be a shame to write a module and ship it without
-#putting down digital signature.
+# Details about the author. It'll be a shame to write a module and ship it without
+# putting down digital signature.
 
 TTY = False
-DATA = country_calling_code
+DATA: Dict[Union[str, Any], Union[str, Any]] = country_calling_code
 
-#This for loop is for inverting my original country data
-#so it can be used for checking a phone code for an unknown selected_country
-#country = {value:key for key, value in calling_code.items()} #another way
-country = dict((v,k) for k,v in country_calling_code.items())
+# This for loop is for inverting my original country data
+# so it can be used for checking a phone code for an unknown selected_country
+# country = {value:key for key, value in calling_code.items()} #another way
+country = dict((v, k) for k, v in country_calling_code.items())
+
 
 def parse_arguments(arg):
-	#handles commandline input
-	PROGRAM = "pycountrycode"
-	DESCRIPTION = "Displays country code of the specified country."
+	# handles commandline input
+	program = "pycountrycode"
+	description = "Displays country code of the specified country."
 
 	parser = argparse.ArgumentParser(
-		prog=PROGRAM, description=DESCRIPTION,
+		prog=program, description=description,
 		usage='%(prog)s [country]'
 	)
-	parser.add_argument('country', help="Displays the country code of a country.",
-						nargs='+')
+	parser.add_argument('country', help="Displays the country code of a country.", nargs='+')
 	args = parser.parser_args(arg)
 	country_data_list = ' '.join(args.country)
 	return country_data_list
@@ -44,7 +46,8 @@ def parse_arguments(arg):
 def get_list_of_countries():
 	return DATA
 
-#first function to determine the phone code of the requested country
+
+# first function to determine the phone code of the requested country
 def get_code(selected_country):
 	"""
 	#Import get_code to get the telephone code by passing the country name
@@ -67,30 +70,30 @@ def get_code(selected_country):
 	>>>
 	"""
 	phone_carrier = get_list_of_countries()
-	country = selected_country
+	nation = selected_country
 	if TTY:
 		try:
-			if country.istitle():
-				print('The country code of %s is %s' .format
-					(country, phone_carrier[country]))
+			if nation.istitle():
+				print('The country code of %s is %s'.format(nation, phone_carrier[nation]))
 			else:
-				country = country.title()
-				print("The country calling code of %s is %s" .format
-					(country, phone_carrier[country]))
+				nation = nation.title()
+				print("The country calling code of %s is %s".format(nation, phone_carrier[nation]))
 		except:
 			print("Please enter a valid country name.")
 	else:
 		try:
-			if country.istitle():
-				return phone_carrier[country]
+			if nation.istitle():
+				return phone_carrier[nation]
 			else:
-				country = country.title()
-				return phone_carrier[country]
+				nation = nation.title()
+				return phone_carrier[nation]
 		except:
 			return 'Undefined country'
-	#print(CountryCallingCode.get(name))
 
-#second function to determine the uknown country of the passed in phone code.
+
+# print(CountryCallingCode.get(name))
+
+# second function to determine the unknown country of the passed in phone code.
 def get_country(call_code):
 	"""
 	#Import get_country to get country name using the telephone code
@@ -115,12 +118,10 @@ def get_country(call_code):
 	if TTY:
 		try:
 			if phone.istitle():
-				print('The country code of %s is %s' .format
-					(phone, phone_carrier[phone]))
+				print('The country code of %s is %s'.format(phone, phone_carrier[phone]))
 			else:
 				phone = phone.title()
-				print("The country calling code of %s is %s" .format
-					(phone, phone_carrier[phone]))
+				print("The country calling code of %s is %s".format(phone, phone_carrier[phone]))
 		except:
 			print("Please enter a valid country name.")
 	else:
@@ -133,10 +134,11 @@ def get_country(call_code):
 		except:
 			return 'Undefined country code'
 
-#calling my first function.
+
+# calling my first function.
 if __name__ == get_code:
 	get_code()
 
-#calling my second function.
+# calling my second function.
 if __name__ == get_country:
 	get_country()
