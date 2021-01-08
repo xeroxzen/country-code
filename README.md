@@ -1,4 +1,4 @@
-# PyCountryCode documentation!
+## PyCountryCode documentation!
 
 ### What it is?
 I have always loved knowing stuff. I love knowledge, it is my first love before anything else. In every kind of setup I find myself in I am always participating because I almost always have an idea about most things. This love of knowledge also made it easy for me to know more country telephone codes.
@@ -31,51 +31,51 @@ C:\Users\Andile Xeroxzen> python
 >>> 
 ```
 
-### Importing the 'getCode' function
-```sh
->>> from pycountrycode.countrycode import getCode
->>> getCode('Zimbabwe')
+### Importing the 'get_code' function
+```python
+>>> from pycountrycode.countrycode import get_code
+>>> get_code('Zimbabwe')
 '+263'
->>> getCode('New Zealand')
+>>> get_code('New Zealand')
 '+64'
->>> getCode('Peru')
+>>> get_code('Peru')
 '+51'
->>> getCode('Madagascar')
+>>> get_code('Madagascar')
 '+261'
->>> getCode('Russia')
+>>> get_code('Russia')
 '+7'
->>> getCode('Australia')
+>>> get_code('Australia')
 '+61'
->>> getCode('Israel')
+>>> get_code('Israel')
 '+972'
->>> getCode('Mal')
+>>> get_code('Mal')
 'Undefined country'
 ```
 
-### Importing the 'getCountry' function.
-```sh
->>> from pycountrycode.countrycode import getCountry
->>> getCountry('+52')
+### Importing the 'get_country' function.
+```python
+>>> from pycountrycode.countrycode import get_country
+>>> get_country('+52')
 'Mexico' 
->>> getCountry('+56')
+>>> get_country('+56')
 'Easter Island'
->>> getCountry('+1')
+>>> get_country('+1')
 'United States of America'
->>> getCountry('+7')
+>>> get_country('+7')
 'Russia'
->>> getCountry('+44')
+>>> get_country('+44')
 'Britain'
->>> getCountry('+86')
+>>> get_country('+86')
 'China'
->>> getCountry('+3')
+>>> get_country('+3')
 'Undefined country code'
->>> getCountry('+2')
+>>> get_country('+2')
 'Undefined country code'
->>> getCountry('+27')
+>>> get_country('+27')
 'South Africa'
 ```
 ### Package Information
-```sh
+```python
 >>> import pycountrycode
 >>> pycountrycode.__author__
 'Andile Jaden Mbele'
@@ -89,11 +89,11 @@ C:\Users\Andile Xeroxzen> python
 ```
 
 ### Also
-```sh
->>> from pycountrycode.countrycode import getCode, getCountry
->>> getCode('Botswana')
+```python
+>>> from pycountrycode.countrycode import get_code, get_country
+>>> get_code('Botswana')
 '+267'
->>> getCountry('+33')
+>>> get_country('+33')
 'France'
 >>> 
 ```
