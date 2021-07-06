@@ -79,7 +79,7 @@ C:\Users\andil> Xeroxzen> python
 >>> get_country('+27')
 'South Africa'
 ```
-### Package Information
+### Library Information
 ```py
 >>> import pycountrycode
 >>> pycountrycode.__author__
