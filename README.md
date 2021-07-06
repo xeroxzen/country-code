@@ -1,4 +1,4 @@
-## PyCountryCode documentation!
+## Pycountrycode Documentation!
 
 ### What it is?
 I have always loved knowing stuff. I love knowledge, it is my first love before anything else. In every kind of setup I find myself in I am always participating because I almost always have an idea about most things. This love of knowledge also made it easy for me to know more country telephone codes.
@@ -13,21 +13,26 @@ I wanted to write something that others could find useful.
 
 
 ### Installation
-```sh
+```py
 $ pip install pycountrycode
 ```
-### Use as per environment
-```sh
-Terminal
+### Use cases as per environment
+
+#### Linux and MacOS 
+```py
 $ pip3 install pycountrycode
 $ python3
 >>> 
 ```
 
-```sh
+#### Windows
+```cmd
 Windows Command Prompt
-C:\Users\Andile Xeroxzen> pip install pycountrycode
-C:\Users\Andile Xeroxzen> python
+C:\Users\andil> pip install pycountrycode
+C:\Users\andil> Xeroxzen> python
+```
+```py
+>>> from pycountrycode.countrycode import get_code
 >>> 
 ```
 
@@ -75,14 +80,14 @@ C:\Users\Andile Xeroxzen> python
 'South Africa'
 ```
 ### Package Information
-```python
+```py
 >>> import pycountrycode
 >>> pycountrycode.__author__
 'Andile Jaden Mbele'
 >>> pycountrycode.__email__
 'andilembele020@gmail.com'
 >>> pycountrycode.__github__
-'www.github.com/xeroxzen/pycountrycode'
+'www.github.com/xeroxzen/country-code'
 >>> pycountrycode.__package__
 'pycountrycode'
 >>>
