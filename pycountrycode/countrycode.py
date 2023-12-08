@@ -1,30 +1,26 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 """Top-level package for Country Call Code Finder."""
 
-# from sys import argv
 import argparse
 
-# import the module containing all the country data.
-# Country data not put together within this file for purposes of avoiding clutter
+"""
+import the module containing all the country data.
+Country data not put together within this file for purposes of avoiding clutter
+"""
 
-# sys.path.append(os.path.join(os.path.dirname(__file__), '.'))
 from typing import Dict, Any, Union
 
 from .country_data import country_calling_code
 
-# from countryData import CountryCallingCode
-
-# Details about the author. It'll be a shame to write a module and ship it without
-# putting down digital signature.
-
+# This is for checking if the user is using a terminal or not.
 TTY = False
 DATA: Dict[Union[str, Any], Union[str, Any]] = country_calling_code
 
-# This for loop is for inverting my original country data
-# so it can be used for checking a phone code for an unknown selected_country
-# country = {value:key for key, value in calling_code.items()} #another way
+"""
+This for loop is for inverting my original country data so it can be used for checking a phone code for an unknown selected_country country = {value:key for key, value in calling_code.items()} #another way
+"""
+
 country = dict((v, k) for k, v in country_calling_code.items())
 
 
@@ -68,7 +64,6 @@ def get_code(selected_country):
     '+61'
     >>> get_code('Israel')
     '+972 '
-    >>>
     """
     phone_carrier = get_list_of_countries()
     nation = selected_country
@@ -94,8 +89,6 @@ def get_code(selected_country):
             return 'Undefined country'
 
 
-# print(CountryCallingCode.get(name))
-
 # second function to determine the unknown country of the passed in phone code.
 def get_country(call_code):
     """Import get_country to get country name using the telephone code.
@@ -114,7 +107,6 @@ def get_country(call_code):
     'Britain'
     >>> get_country('+86')
     'China'
-    >>>
     """
     phone_carrier = country
     phone = call_code
